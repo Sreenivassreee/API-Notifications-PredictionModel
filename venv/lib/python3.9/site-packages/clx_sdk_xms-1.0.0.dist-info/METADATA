@@ -1,0 +1,62 @@
+Metadata-Version: 2.0
+Name: clx-sdk-xms
+Version: 1.0.0
+Summary: Library for CLX Communications HTTP REST Messaging API
+Home-page: https://github.com/clxcommunications/sdk-xms-python
+Author: Robert Helgesson
+Author-email: robert@chaitsa.com
+License: Apache License, Version 2.0
+Keywords: messaging mobile sms
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Communications
+Requires-Dist: iso8601 (>=0.1.9)
+Requires-Dist: requests (>=2.4.2)
+
+REST API SDK for SMS
+====================
+
+This is the Python SDK for the CLX Communications REST API (also
+called XMS) for sending and receiving single or batch SMS messages. It
+also supports scheduled sends, organizing your frequent recipients
+into groups, and customizing your message for each recipient using
+parametrization.
+
+This library is compatible with Python 2.7 and 3.3 and later.
+
+Getting Started
+---------------
+
+The SDK is packaged using setuptools_ and is available in the PyPI_
+repository under the name clx-sdk-xms_. You can therefore, for
+example, use pip_ to install the library using the command ``pip
+install clx-sdk-xms``.
+
+After installing the SDK it is recommended to read the tutorial_ and
+`Client documentation`_.
+
+.. _Setuptools: https://pypi.python.org/pypi/setuptools/
+.. _PyPI: https://pypi.python.org/
+.. _clx-sdk-xms: https://pypi.python.org/pypi/clx-sdk-xms/
+.. _pip: https://pip.pypa.io/
+.. _tutorial: https://clxcommunications.github.io/sdk-xms-python/tutorial.html
+.. _`Client documentation`: https://clxcommunications.github.io/sdk-xms-python/clx.xms.html#module-clx.xms.client
+
+License
+-------
+
+This project is licensed under the Apache License Version 2.0. See the
+LICENSE.txt file for the license text.
+
+

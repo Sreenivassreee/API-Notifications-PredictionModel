@@ -1,0 +1,66 @@
+Metadata-Version: 1.1
+Name: sinchsms
+Version: 1.0.4
+Summary: A module to send sms using the Sinch REST apis, www.sinch.com
+Home-page: https://github.com/sinch/python-sinch-sms.git
+Author: Slava Savitskiy
+Author-email: slava@sinch.com
+License: UNKNOWN
+Description: Python module for sending sms with Sinch
+        ----------------------------------------
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        .. code:: bash
+        
+            pip install sinchsms
+        
+        Usage example
+        ~~~~~~~~~~~~~
+        
+        .. code:: python
+        
+            import time
+            from sinchsms import SinchSMS
+        
+            number = '+46000000001'
+            message = 'Hello from Sinch!'
+        
+            client = SinchSMS(your_app_key, your_app_secret)
+        
+            print("Sending '%s' to %s" % (message, number))
+            response = client.send_message(number, message)
+            message_id = response['messageId']
+        
+            response = client.check_status(message_id)
+            while response['status'] != 'Successful':
+                print(response['status'])
+                time.sleep(1)
+                response = client.check_status(message_id)
+            print(response['status'])
+        
+        .. note::
+        
+            You will need a Sinch account for getting your application key and secret. Visit www.sinch.com to get started.
+        
+        Using as command line script
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        .. code:: bash
+        
+            ./sinchsms.py
+            usage: sinchsms.py <application key> <application secret> send <number> <message> <from_number>
+                   sinchsms.py <application key> <application secret> status <message_id>
+        
+        
+Keywords: sms,sinch
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Communications
+Classifier: Development Status :: 4 - Beta
